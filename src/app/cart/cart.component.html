@@ -1,0 +1,48 @@
+<section class="cart-section">
+    <div class="container-fluid">
+        <h3 class="mb-2"><img class="img-fluid bg-white" src="../../assets/images/cart3.png" width="35px"> My Shopping
+            Cart</h3>
+        <div class="row total-section">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 text-end" id="subtotal-section">
+                <span>Cart subtotal&nbsp; [{{ itemCount }} item(s)]:&nbsp;&nbsp; {{ subTotal() | currency:
+                    '$'}}</span><br>
+                <button class="bg-danger shadow text-white" type="button" (click)="checkOut()">Checkout</button><br>
+                <button class=" bg-warning shadow" type="button" [routerLink]="['/products']">Go to Courses</button>
+            </div>
+        </div>
+        <div class="row m-2 py-4 align-items-center justify-content-center shadow rounded border"
+            *ngFor="let course of cartModel.courses">
+            <div class="col-md-3" id="img-section">
+                <ul class="list-unstyled text-end">
+                    <li><img class="img-fluid m-3" src="{{course.image}}" width="55%"></li>
+                </ul>
+            </div>
+            <div class="col-md-3" id="detail-section">
+                <h5>{{course.courseName}}</h5>
+                <div>
+                    <img class="img-fluid" src="../../assets/images/trashcan2.png" width="20px">
+                    <button class="text-primary m-1" type="button"
+                        (click)="removeFromCart(course.courseId)">Delete</button> |
+                    <button class="text-primary m-1" type="button" [routerLink]="['/products/view', course.courseId]">Go Back</button>    
+                </div>
+            </div>
+            <div class="col-md-3 text-end">
+                <h3>Subscription:</h3>
+                <span class="fs-5">{{ course.price | currency: '$' }} per month</span>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 text-center">
+            </div>
+            <div class="col-md-6" id="cart-zero" *ngIf="cartModel.itemCount === 0">
+                <p class="h2">Your Rubbles Cart is empty, Keep shopping to find a course!</p>
+                <button class=" bg-danger text-white shadow rounded" type="button" [routerLink]="['/products']">Shop Now</button>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</section>

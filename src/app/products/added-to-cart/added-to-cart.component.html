@@ -1,0 +1,22 @@
+<section class="added-section">
+    <div class="container-fluid">
+        <div class="row mb-1 text-center" id="added-to-cart">
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+                <img src="{{course.image}}" width="58%">
+            </div>
+            <div class="col-md-5 p-4">
+                <img class="img-fluid" src="../../assets/images/mark2.png" width="30px">
+                <span class="h2"> Added to Shopping Cart</span>
+                <p>{{course.courseName}}.</p>
+                <!-- <ul class="mb-3 list-unstyled">
+                    <li>{{course.courseName}}.</li>
+                </ul> -->
+                <div class="">
+                    <button class="bg-danger text-white shadow" type="button" [routerLink]="['/cart-list']"> Go&nbsp; to&nbsp; Cart</button>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</section>

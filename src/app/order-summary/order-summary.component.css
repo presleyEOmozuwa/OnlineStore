@@ -1,0 +1,27 @@
+
+.order-section{
+    margin-top: 100px;
+}
+
+.order-section #amount{
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.order-section #summary{
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.order-section #checkout-section button{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    margin: 3px;
+    width: 38%;
+    padding: 2px;
+}
+
+/* .order-section #img-section span{
+    color: grey;
+} */

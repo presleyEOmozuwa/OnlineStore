@@ -1,0 +1,44 @@
+<section class="firstName-section">
+    <div class="container">
+        <div class="row pt-4">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p class="display-6">Change First Name</p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-5" id="firstName-update">
+                <p>If you want to change the first name associated with your Rubbles account, you may do so below. Be sure to click the Save Changes button when you are done.</p>
+                <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                    <div class="form-group">
+                        <label> New&nbsp; First&nbsp; Name</label>
+                        <input class="form-control shadow" type="text" name="firstName" ngModel #firstName="ngModel" maxlength="20" minlength="2" required>
+                        <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+                            <small class="text-danger" *ngIf="firstName.errors.required">
+                                First Name is Required.
+                            </small>
+                            <small class="text-danger" *ngIf="firstName.errors.minlength">
+                                First Name must be minimum of 2 characters.
+                            </small>
+                            <small class="text-danger" *ngIf="firstName.errors.maxlength">
+                                First Name must be maximum of 20 characters.
+                            </small>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="shadow bg-primary text-white p-1" type="submit" [disabled]="!f.valid">Save Changes</button>
+                    </div>
+                </form>
+                <div class="text-center mt-2">
+                    <button class="shadow bg-primary text-white p-1" type="button" (click)="goBack()">Cancel</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+    </div>
+</section>

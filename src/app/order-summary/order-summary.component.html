@@ -1,0 +1,36 @@
+<section class="order-section">
+    <div class="container p-4 rounded">
+        <div class="row align-items-center mb-5">
+            <h2 class="text-center mb-4 fw-2">Item Summary</h2>
+            <div class="col-md-3" id="img-section">
+                <img class="img-fluid mb-3 rounded" src="{{item.image}}" width="40%"><br>
+            <!--  <p>{{item.courseName}}</p> -->
+            </div>
+            <div class="col-md-6" id="summary">
+                <ul class="list-unstyled">
+                    <li>Subscription</li>
+                    <li>Shipping & handling</li>
+                    <li>Total before tax</li>
+                    <li>Estimated tax to be collected</li>
+                </ul>
+                <p class="text-danger fs-5 fw-bolder">Total</p>
+            </div>
+            <div class="col-md-3" id="amount">
+                <ul class="list-unstyled">
+                    <li>{{ item.price | currency: '$' }}</li>
+                    <li>&nbsp; {{ shipping | currency: '$' }}</li>
+                    <li>{{ item.price | currency: '$' }}</li>
+                    <li>&nbsp; {{ estimatedTax | currency: '$' }}</li>
+                </ul>
+                <p class="text-danger fs-5 fw-bolder">{{item.price | currency: '$'}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-end" id="checkout-section">
+                <button class="bg-danger shadow text-white" type="button" (click)="checkOut(item.priceId)">Checkout</button><br>
+                <button class=" bg-warning shadow" type="button" (click)="goToItem(item.courseId)">Go&nbsp; Back</button>
+            </div>
+        </div>
+    </div>
+</section>
+

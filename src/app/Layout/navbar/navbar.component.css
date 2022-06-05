@@ -1,0 +1,24 @@
+/* nav{
+    background-color: navy;
+} */
+
+nav .navbar-toggler{
+    box-shadow: none !important
+}
+
+/* nav .navbar-nav li a
+{
+    color: white;
+} */
+
+/* nav #navbarSupportedContent a:hover
+{
+    padding: 15px 5px 15px 5px;
+    border: 5px snow  grey;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 2px 2px whitesmoke;
+} */
+
+nav span a{
+    text-decoration: none;
+}

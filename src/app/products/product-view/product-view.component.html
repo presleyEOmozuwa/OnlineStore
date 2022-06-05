@@ -1,0 +1,44 @@
+<section class="" id="productSection">
+    <div class="container">
+        <div class="row pt-4 align-items-center">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10 text-center">
+                <h2 class="pt-3">{{course.courseName}}.</h2>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center" id="imageDes">
+                <img class="mb-3 rounded img-fluid" width="50%" src="{{course.image}}">
+                <p class="mb-4">{{ course.price | currency: '$' }} per month</p>
+                <button class="bg-danger text-white" type="button" [routerLink]="[]" (click)="goToCourses()">Back&nbsp; to&nbsp; Courses</button><br>
+                <button class="bg-warning" type="button" (click)="goToCart()" *ngIf="isLoggedIn()">Go&nbsp; to&nbsp; Cart</button>
+            </div>
+            <div class="col-md-6 pt-5" id="description">
+                <h3>Subscribe to this Course</h3>
+                <p>{{course.description}}</p>
+                <p style="font-size: 24px;">Course Package Includes:</p>
+                <ul class="list-unstyled">
+                    <li>In Depth Explanations<br>Of Confusing Concepts<br>
+                    With Real World Projects</li>
+                    <li>Exercises and Solutions</li>
+                    <li>Basic Support on Github</li>
+                    <li>Monthly Updates</li>
+                    <li>Free Cancellation</li>
+                </ul>
+                <div class="mb-1">
+                    <form (ngSubmit)="addToCart(f)" #f="ngForm">
+                        <div class="input-group">
+                            <input type="hidden" class="form-control" name="courseId" [ngModel]="course.courseId" #sendToCart="ngModel">
+                        </div>
+                        <button class="bg-danger text-white shadow" type="submit"><i class="fas fa-cart-arrow-down"></i>&nbsp;&nbsp;&nbsp;Add&nbsp; to&nbsp; Cart</button>
+                    </form>
+                </div>
+                <div>
+                    <button class="bg-warning text-dark shadow" type="button" (click)="goToBuyNow(course.courseId)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

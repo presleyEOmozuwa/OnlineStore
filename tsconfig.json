@@ -6,9 +6,12 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
+    "strictNullChecks": false, // Added this
+    "noImplicitReturns": false, // Set this to false
+    "noImplicitAny": false,   // Added this
+    /* "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true, */
+    "strictPropertyInitialization": false, // Added this
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
@@ -17,9 +20,13 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2017",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "module": "es2020",
+    "skipLibCheck": true, // Added this
     "lib": [
-      "es2020",
+      "es2018",
       "dom"
     ]
   },

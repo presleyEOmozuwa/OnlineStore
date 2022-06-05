@@ -1,0 +1,13 @@
+.terms-of-service{
+    margin-top: 100px;
+}
+
+.terms-of-service #terms p{
+    font-size: 18px;
+}
+
+.terms-of-service #terms ol li{
+    font-size: 18px;
+    margin: 15px;
+    list-style: square;
+}

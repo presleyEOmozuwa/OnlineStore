@@ -1,0 +1,20 @@
+.plan-section{
+    margin-top: 100px;
+}
+
+
+.plan-section a{
+    text-decoration: none;
+    color: #00248B;
+}
+
+/* .plan-section .test{
+    height:200px;
+    width: 200px;
+}
+
+.plan-section img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+} */

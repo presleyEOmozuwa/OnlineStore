@@ -1,0 +1,21 @@
+
+.alert{
+    margin-top: 80px;
+}
+
+.alert{
+    background-image: url("src/assets/images/background-4326353_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.alert #message p{
+    font-size: 26px;
+}
+
+.alert #message{
+    background-color: white;
+    margin-top: 85px;
+}

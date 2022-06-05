@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light border bg-body  shadow rounded mx-2 mb-2 fixed-top p-3">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Rubbles</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto ms-auto mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard']" *ngIf="isLoggedIn()">Dashboard</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard']" *ngIf="vm.loggedIn">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/products']">Courses</a>
+                </li>
+            </ul>
+            <app-auth-links></app-auth-links>
+        </div>
+    </div>
+</nav>

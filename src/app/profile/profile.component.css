@@ -1,0 +1,30 @@
+
+.profile{
+    padding-top: 90px;
+}
+
+.profile #settings a{
+    text-decoration: none;
+}
+
+.profile #update{
+    margin-bottom: 55px;
+}
+
+.profile #security{
+    padding: 37px;
+}
+
+.profile #image{
+    background-image: url("src/assets/images/update-1672385_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 100%;
+    height: 300px;
+}
+
+
+
+
+

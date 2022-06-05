@@ -1,0 +1,53 @@
+<section class="update-profile p-4">
+    <div class="container align-items-center rounded">
+        <div class="row mb-3 text-center">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p class="display-6">Account Personal Details</p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row mb-3 pt-4 shadow rounded" id="firstName">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-6">
+                <span>First Name</span>
+                <p>{{ user.firstName }}</p>
+            </div>
+            <div class="col-md-2 text-end p-3">
+                <a class="bg-primary" [routerLink]="['/profile/first-name-update']">Edit</a>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row mb-3 pt-4 shadow rounded" id="lastName">
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
+                <span>Last Name</span>
+                <p>{{ user.lastName }}</p>
+            </div>
+            <div class="col-md-2 p-3 text-end">
+                <a class="bg-primary" [routerLink]="['/profile/last-name-update']">Edit</a>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row mb-4 pt-4 shadow rounded" id="userName">
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
+                <span>UserName</span>
+                <p>{{ user.userName }}</p>
+            </div>
+            <div class="col-md-2 text-end p-3">
+                <a class="bg-primary" [routerLink]="['/profile/user-name-update']">Edit</a>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row" id="goBack">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 text-center">
+                <button class="bg-primary text-white shadow" [routerLink]="['/profile']">Go Back</button>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+</section>

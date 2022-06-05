@@ -1,0 +1,25 @@
+<!-- <div class="auth-links">
+        <a class="text-dark" [routerLink]="['/login']" *ngIf="!isLoggedIn()">Login</a>
+        <a class="text-dark" [routerLink]="['/register']" *ngIf="!isLoggedIn()">Register</a>
+        <a class="text-dark" type="button" (click)="logout()" *ngIf="isLoggedIn()">Sign out</a>
+        <a class="text-dark" [routerLink]="['/profile']" *ngIf="isLoggedIn()">Account</a>
+        <a class="text-dark" type="button" (click)="goToPortal()" *ngIf="isLoggedIn() && loginService.loggedInUser.isSubscriber == true">Billing</a>
+        <a [routerLink]="[]" *ngIf="isLoggedIn()">{{displayFirstName()}}</a>
+        <button type="button" [routerLink]="['/cart-list']" *ngIf="isLoggedIn()">
+                <span class="position-absolute text-danger fs-5">&nbsp;{{ courseCount }}</span>
+                <img class="auth img-fluid mt-3" src="../../assets/images/carty3.png" width="25px">
+        </button>
+</div> -->
+
+<div class="auth-links">
+        <a class="text-dark" [routerLink]="['/login']" *ngIf="!vm.loggedIn">Login</a>
+        <a class="text-dark" [routerLink]="['/register']" *ngIf="!vm.loggedIn">Register</a>
+        <a class="text-dark" type="button" (click)="logout()" *ngIf="vm.loggedIn">Sign out</a>
+        <a class="text-dark" [routerLink]="['/profile']" *ngIf="vm.loggedIn && vm.emailConfirmed">Account</a>
+        <a class="text-dark" type="button" (click)="goToPortal()" *ngIf="vm.loggedIn && vm.subscriber">Billing</a>
+        <a [routerLink]="[]" *ngIf="vm.loggedIn">{{vm.firstName}}</a>
+        <button type="button" [routerLink]="['/cart-list']" *ngIf="vm.loggedIn">
+                <span class="position-absolute text-danger fs-5">&nbsp;{{ courseCount }}</span>
+                <img class="auth img-fluid mt-3" src="../../assets/images/carty3.png" width="25px">
+        </button>
+</div>

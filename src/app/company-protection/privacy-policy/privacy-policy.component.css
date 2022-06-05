@@ -1,0 +1,19 @@
+.privacy-policy{
+    margin-top: 100px;
+}
+
+.privacy-policy #privacy p{
+    font-size: 18px;
+}
+
+.privacy-policy #privacy ol li{
+    margin: 20px;
+    font-size: 18px;
+    list-style: square;
+}
+
+.privacy-policy #privacy ul li{
+    margin: 20px;
+    font-size: 18px;
+    list-style: square;
+}

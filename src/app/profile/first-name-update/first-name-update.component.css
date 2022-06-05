@@ -1,0 +1,23 @@
+.firstName-section{
+    margin-top: 100px;
+}
+
+
+#firstName-update input.ng-touched.ng-invalid{
+    border: 1px solid red;
+}
+
+#firstName-update input
+{
+    box-shadow: none !important;
+    border: 1px solid gainsboro;
+}
+
+#firstName-update button
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 180px;
+}
+

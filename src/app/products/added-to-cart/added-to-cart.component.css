@@ -1,0 +1,18 @@
+
+.added-section{
+    margin-top: 150px;
+}
+
+.added-section #added-to-cart button{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    margin: 3px;
+    width: 55%;
+    padding: 3px;
+}
+
+/* .added-section #added-to-cart p{
+    font-size: 16px;
+}
+ */

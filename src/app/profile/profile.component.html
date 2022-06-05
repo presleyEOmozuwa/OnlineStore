@@ -1,0 +1,22 @@
+<section class="profile">
+    <div class="container-fluid align-items-center">
+        <div class="row" id="update">
+            <div class="col-md-12" id="image"></div>
+        </div>
+        <div class="row" id="settings">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 shadow p-4" id="account">
+                <h4>Personal Details</h4>
+                <p>Update&nbsp; your&nbsp; firstname,&nbsp; lastname,&nbsp; and&nbsp; username.</p>
+                <a [routerLink]="['/profile/personal-details-update']">Update info</a>
+            </div>
+            <div class="col-md-5 shadow border-left p-4" id="security">
+                <h4>Sign-in & Security</h4>
+                <p>Update&nbsp; your&nbsp; email&nbsp; and&nbsp; password.</p>
+                <a [routerLink]="['/profile/login-details-update']">Protect info</a>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</section>
+
